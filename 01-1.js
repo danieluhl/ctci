@@ -20,7 +20,7 @@ const isUniqueChars = (str) => {
 /** 1.3 replace spaces with %20 **/
 const replaceSpaces = (str) => {
   const size = str.length;
-  const result = new Array(size);
+  const result = new Array(size)
   let resultPointer = 0;
   for (let i = 0; resultPointer < size; i++) {
     const char = str.charAt(i);
