@@ -26,6 +26,8 @@ const getBinaryTree = (sortedArr) => {
   }
   return root;
 };
-console.log(getBinaryTree([1, 3, 12, 18, 54, 383]));
-console.log(getBinaryTree([1, 2, 3, 4, 5, 6, 7, 8, 9]));
-console.log(getBinaryTree([1, 2, 3, 4, 5, 6, 7, 8]));
+// console.log(getBinaryTree([1, 3, 12, 18, 54, 383]));
+// console.log(getBinaryTree([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+// console.log(getBinaryTree([1, 2, 3, 4, 5, 6, 7, 8]));
+
+export { getBinaryTree };
