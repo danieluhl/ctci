@@ -1,12 +1,12 @@
 // check if a binary tree is a BST (left always smaller than right)
 
 import {
-  createBSTFromArray,
+  createBSTFromSortedArray,
   printBinaryTree,
   createRandomBinaryTreeFromArray,
 } from "./binary-tree-helpers.mjs";
 
-const sample1 = createBSTFromArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 32, 93]);
+const sample1 = createBSTFromSortedArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 32, 93]);
 
 const sample2 = createRandomBinaryTreeFromArray([
   9, 32, 42, 51, 1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 54, 6, 3, 72,

@@ -30,22 +30,26 @@ const createRandomBinaryTreeFromArray = (arr, node, root) => {
   }
   return next;
 };
-const createBSTFromArray = (sortedArr) => {
+
+const createBSTFromSortedArray = (sortedArr, parent = null) => {
   if (sortedArr.length === 0) {
     return null;
   } else if (sortedArr.length === 1) {
-    return new Node(sortedArr[0]);
+    const next = new Node(sortedArr[0]);
+    next.parent = parent;
+    return next;
   }
   const middle = Math.floor(sortedArr.length / 2);
   const left = sortedArr.slice(0, middle);
   const right = sortedArr.slice(middle + 1, sortedArr.length);
   const root = new Node(sortedArr[middle]);
   if (left && left.length > 0) {
-    root.left = createBSTFromArray(left);
+    root.left = createBSTFromSortedArray(left, root);
   }
   if (right && right.length > 0) {
-    root.right = createBSTFromArray(right);
+    root.right = createBSTFromSortedArray(right, root);
   }
+  root.parent = parent;
   return root;
 };
 // console.log(getBinaryTree([1, 3, 12, 18, 54, 383]));
@@ -76,4 +80,8 @@ const printBinaryTree = (node) => {
   });
 };
 
-export { createBSTFromArray, printBinaryTree, createRandomBinaryTreeFromArray };
+export {
+  createBSTFromSortedArray,
+  printBinaryTree,
+  createRandomBinaryTreeFromArray,
+};

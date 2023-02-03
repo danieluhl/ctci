@@ -1,12 +1,12 @@
 // check if a binary tree is balanced (left and right are not different by more than 1)
 
 import {
-  createBSTFromArray,
+  createBSTFromSortedArray,
   printBinaryTree,
   createRandomBinaryTreeFromArray,
 } from "./binary-tree-helpers.mjs";
 
-const sample1 = createBSTFromArray([
+const sample1 = createBSTFromSortedArray([
   1, 2, 3, 4, 5, 6, 2, 32, 25, 22, 66, 38, 42, 38,
 ]);
 
