@@ -57,7 +57,7 @@ const printBinaryTree = (node) => {
   queue.push({ ...node, level: 0, parent: "-" });
   const results = [];
   while (queue.length > 0) {
-    const cur = queue.pop();
+    const cur = queue.shift();
     const curLevel = cur.level;
     results[curLevel] ??= [];
     results[curLevel].push(`${cur.parent}:${cur.value}`);

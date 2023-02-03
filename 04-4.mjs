@@ -5,7 +5,6 @@ import {
   printBinaryTree,
   createRandomBinaryTreeFromArray,
 } from "./binary-tree-helpers.mjs";
-import { printLinkedLists } from "./linked-list-helpers.mjs";
 
 const sample1 = createBSTFromArray([
   1, 2, 3, 4, 5, 6, 2, 32, 25, 22, 66, 38, 42, 38,
