@@ -58,7 +58,7 @@ const createBSTFromSortedArray = (sortedArr, parent = null) => {
 
 const printBinaryTree = (node) => {
   const queue = [];
-  queue.push({ ...node, level: 0, parent: "-" });
+  queue.push({ ...node, level: 0, parent: '-' });
   const results = [];
   while (queue.length > 0) {
     const cur = queue.shift();
@@ -75,11 +75,24 @@ const printBinaryTree = (node) => {
   results.forEach((level, i) => {
     const spaces = 2 ** (results.length - 1 - i) / 2;
     console.log(
-      `${" ".repeat(spaces)}${level.join(" ".repeat(Math.max(spaces * 2, 1)))}`
+      `${' '.repeat(spaces)}${level.join(' '.repeat(Math.max(spaces * 2, 1)))}`
     );
   });
 };
+/*
 
+spaceBefore = level-1 * 3
+spaceBetween = 
+
+   __1
+__2   __3
+
+if null, do ___
+
+         __1 // 9, 0
+   __2         __3 // 3, 9
+__4   __5   __6   __7 // 0, 3
+*/
 export {
   createBSTFromSortedArray,
   printBinaryTree,
